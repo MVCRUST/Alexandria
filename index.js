@@ -31,11 +31,22 @@ async function fetchBookData(book) {
 }
 
 // Define function that creates an item in the results list with the name of the first book found by the API.
+// For future reference if we want to start placing the list into a table instead of a list
+// function addBook(book) {
+//   for (let i = 1; i < 15; i++) {
+//     const li = document.createElement("li");
+//     const liAuthor = document.createElement("li");
+//     li.textContent = book.docs[i].title;
+//     bookList.appendChild(li);
+//     liAuthor.textContent = book.docs[i].author_name;
+//     bookList.appendChild(liAuthor);
+//   }
+// }
 
 function addBook(book) {
   for (let i = 1; i < 15; i++) {
     const li = document.createElement("li");
-    li.textContent = book.docs[i].title;
+    li.textContent = book.docs[i].title + "    " + book.docs[i].author_name + "    " + book.docs[i].first_publish_year + "    " + book.docs[i].has_fulltext + "    ";
     bookList.appendChild(li);
   }
 }
