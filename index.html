@@ -16,41 +16,65 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="styles.css" />
     <title>Alexandria</title>
   </head>
 
   <body>
-    <nav class="navbar bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img
-            src="/Images/AlexandriaLogo.jpg"
-            alt="Logo"
-            width="30"
-            height="24"
-            class="d-inline-block align-text-top"
-          />
-          George's Library _Powered by Alexandria
-        </a>
+    <div class="headerBar">
+      <h1 class="headerText">
+        George's Book Nook - Powered by Alexandria
+      <h1>
+      <img
+        src="/Images/AlexandriaLogo.png"
+        alt="Logo"
+        width="162px"
+        height="162px"
+        class="logoImage"
+      />
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">
+          <section id="inputSection">
+          <form>
+            <input
+              name="book"
+              id="bookInput"
+              type="text"
+              placeholder="         Search e.g. by Title, Author"
+              required
+              class="searchBar"
+            />
+          </form>
+          </section>
+
+          <section id="searchResults">
+            <table>
+              <thead class="tableHead">
+                <tr>
+                  <th>Title</th>
+                  <th>Author</th>
+                  <th>Genre</th>
+                  <th>Quantity</th>
+                  <th>Index</th>
+                </tr>
+              </thead>
+              <tbody class="tableBody">
+                <tr>
+                  <td>Hello</td>
+                  <td>is</td>
+                  <td>anybody</td>
+                  <td>there</td>
+                  <td>?</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
       </div>
-    </nav>
-
-    <section id="inputSection">
-      <form>
-        <label for="bookInput">Search for Book</label>
-        <input
-          name="book"
-          id="bookInput"
-          type="text"
-          placeholder="e.g. by Title, Author"
-          required
-        />
-        <button type="submit" value="submit">Search</button>
-      </form>
-    </section>
-
-    <section id="searchResults">
-      <table></table>
-    </section>
+    </div>
+  
   </body>
 </html>
