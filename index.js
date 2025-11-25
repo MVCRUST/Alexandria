@@ -1,6 +1,6 @@
 // Select elements from DOM
 const bookForm = document.querySelector("#inputSection form");
-const bookList = document.querySelector("#searchResults table");
+const bookList = document.querySelector("#searchResults tbody");
 
 // Add an event listener to submit button that fetches book data using API
 bookForm.addEventListener("submit", extractBook);
@@ -45,7 +45,7 @@ async function fetchBookData(book) {
 
 function addBook(book) {
   for (let i = 1; i < 15; i++) {
-    const li = document.createElement("tr");
+    const row = document.createElement("tr");
     const cell = document.createElement("td");
     cell.textContent = book.docs[i].title;
     const cell2 = document.createElement("td");
@@ -57,11 +57,11 @@ function addBook(book) {
     const cell5 = document.createElement("td");
     cell5.textContent = book.docs[i].has_fulltext;
     //+ book.docs[i].first_publish_year + book.docs[i].title + book.docs[i].has_fulltext;
-    bookList.appendChild(li);
-    li.appendChild(cell);
-    li.appendChild(cell2);
-    li.appendChild(cell3);
-    li.appendChild(cell4);
-    li.appendChild(cell5);
+    bookList.appendChild(row);
+    row.appendChild(cell);
+    row.appendChild(cell2);
+    row.appendChild(cell3);
+    row.appendChild(cell4);
+    row.appendChild(cell5);
   }
 }
