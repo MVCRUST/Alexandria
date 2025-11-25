@@ -1,3 +1,7 @@
+body {
+    background-color: #f1f3e0;
+}
+
 .headerBar {
     height: 129px;
     background-color: #778873;
@@ -25,4 +29,26 @@
     background-image: url('/Images/SearchIcon.png');
     background-position: 10px 10px;
     background-repeat: no-repeat;
+}
+
+table {
+    margin-top: 25px;
+    width: 1047px;
+    border-width: 1px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table, th, td {
+    border: 1px solid #f1f3e0;
+}
+
+.tableHead {
+    background-color: #778873;
+    text-align: center;
+}
+
+.tableBody {
+    background-color: #d2dcb6;
+    text-align:center;
 }
