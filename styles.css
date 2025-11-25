@@ -16,3 +16,13 @@
 .logoImage {
     float: right;;
 }
+
+.searchBar {
+    height: 57px;
+    width: 1047px;
+    border-radius: 15px;
+    margin-top: 25px;
+    background-image: url('/Images/SearchIcon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+}
