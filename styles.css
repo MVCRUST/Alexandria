@@ -1,0 +1,18 @@
+.headerBar {
+    height: 129px;
+    background-color: #778873;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.headerText {
+    font-size: 3rem;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.logoImage {
+    float: right;;
+}
