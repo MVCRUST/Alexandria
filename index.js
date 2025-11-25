@@ -20,6 +20,7 @@ async function fetchBookData(book) {
     );
     if (respData.ok) {
       const bookData = await respData.json();
+      bookList.innerHTML = '<ul></ul>'
       addBook(bookData);
     } else {
       throw "Something went wrong with your search.";
@@ -32,7 +33,7 @@ async function fetchBookData(book) {
 // Define function that creates an item in the results list with the name of the first book found by the API.
 
 function addBook(book) {
-  for (let i = 9; i < 15; i++) {
+  for (let i = 1; i < 15; i++) {
     const li = document.createElement("li");
     li.textContent = book.docs[i].title;
     bookList.appendChild(li);
