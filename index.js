@@ -51,7 +51,7 @@ function addBook(book) {
     const cell2 = document.createElement("td");
     cell2.textContent = book.docs[i].author_name;
     const cell3 = document.createElement("td");
-    cell3.textContent = book.docs[i].first_publish_year;
+    cell3.textContent = book.docs[i].language[0];
     const cell4 = document.createElement("td");
     cell4.textContent = book.docs[i].edition_count;
     const cell5 = document.createElement("td");
