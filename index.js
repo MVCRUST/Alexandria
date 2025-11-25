@@ -30,8 +30,11 @@ async function fetchBookData(book) {
 }
 
 // Define function that creates an item in the results list with the name of the first book found by the API.
+
 function addBook(book) {
-  const li = document.createElement("li");
-  li.textContent = book.docs[0].title;
-  bookList.appendChild(li);
+  for (let i = 9; i < 15; i++) {
+    const li = document.createElement("li");
+    li.textContent = book.docs[i].title;
+    bookList.appendChild(li);
+  }
 }
