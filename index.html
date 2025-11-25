@@ -16,41 +16,119 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="styles.css" />
     <title>Alexandria</title>
   </head>
 
   <body>
-    <nav class="navbar bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img
-            src="/Images/AlexandriaLogo.jpg"
-            alt="Logo"
-            width="30"
-            height="24"
-            class="d-inline-block align-text-top"
-          />
-          George's Library _Powered by Alexandria
-        </a>
+    <div class="headerBar">
+      <h1 class="headerText">
+        George's Book Nook - Powered by Alexandria
+      <h1>
+      <img
+        src="/Images/AlexandriaLogo.png"
+        alt="Logo"
+        width="162px"
+        height="162px"
+        class="logoImage"
+      />
+    </div>
+
+    <div class="container m-1">
+      <div class="row">
+        <div class="col-md-10">
+          <section id="inputSection">
+          <form>
+            <input
+              name="book"
+              id="bookInput"
+              type="text"
+              placeholder="         Search e.g. by Title, Author"
+              required
+              class="searchBar"
+            />
+          </form>
+          </section>
+
+          <section id="searchResults">
+            <table>
+              <thead class="tableHead">
+                <tr>
+                  <th>Title</th>
+                  <th>Author</th>
+                  <th>Genre</th>
+                  <th>Quantity</th>
+                  <th>In Stock?</th>
+                </tr>
+              </thead>
+              <tbody class="tableBody">
+                <tr>
+                  <td>Hello</td>
+                  <td>is</td>
+                  <td>anybody</td>
+                  <td>there</td>
+                  <td>?</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
+
+        <div class="col-md-2 d-flex justify-content-center vstack gap-3">         
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Genre
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item"">Genre 1</a></li>
+                <li><a class="dropdown-item">Genre 2</a></li>
+                <li><a class="dropdown-item">Genre 3</a></li>
+              </ul>
+            </div>
+            
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Age
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item"">0-3 Years</a></li>
+                <li><a class="dropdown-item">3-5 Years</a></li>
+                <li><a class="dropdown-item">16+ Years</a></li>
+              </ul>
+            </div> 
+            
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+                Fiction
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+              <label class="form-check-label" for="flexRadioDefault2">
+                Non-Fiction
+              </label>
+            </div>
+
+            <div>
+              <button type="button" class="saleButton">Books for Sale</button>
+            </div>
+
+            <div>
+              <button type="button" class="checkOutButton">Check Out</button>
+            </div>
+
+            <div>
+              <button type="button" class="checkInButton">Check In</button>
+            </div>
+
+            <div>
+              <button type="button" class="logInOutButton">Log In / Log Out</button>
+            </div>
+        </div>
       </div>
-    </nav>
-
-    <section id="inputSection">
-      <form>
-        <label for="bookInput">Search for Book</label>
-        <input
-          name="book"
-          id="bookInput"
-          type="text"
-          placeholder="e.g. by Title, Author"
-          required
-        />
-        <button type="submit" value="submit">Search</button>
-      </form>
-    </section>
-
-    <section id="searchResults">
-      <ul></ul>
-    </section>
+    </div>
+  
   </body>
 </html>
