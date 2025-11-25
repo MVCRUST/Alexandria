@@ -1,6 +1,6 @@
 // Select elements from DOM
 const bookForm = document.querySelector("#inputSection form");
-const bookList = document.querySelector("#bookSection ul");
+const bookList = document.querySelector("#searchResults ul");
 
 // Add an event listener to submit button that fetches book data using API
 bookForm.addEventListener("submit", extractBook);
@@ -27,4 +27,11 @@ async function fetchBookData(book) {
   } catch (e) {
     console.log(e);
   }
+}
+
+// Define function that creates an item in the results list with the name of the first book found by the API.
+function addBook(book) {
+  const li = document.createElement("li");
+  li.textContent = book.docs[0].title;
+  bookList.appendChild(li);
 }
