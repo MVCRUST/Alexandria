@@ -1,6 +1,6 @@
 // Select elements from DOM
 const bookForm = document.querySelector("#inputSection form");
-const bookList = document.querySelector("#searchResults ul");
+const bookList = document.querySelector("#searchResults table");
 
 // Add an event listener to submit button that fetches book data using API
 bookForm.addEventListener("submit", extractBook);
@@ -20,7 +20,7 @@ async function fetchBookData(book) {
     );
     if (respData.ok) {
       const bookData = await respData.json();
-      bookList.innerHTML = '<ul></ul>'
+      bookList.innerHTML = '<table></table>'
       addBook(bookData);
     } else {
       throw "Something went wrong with your search.";
@@ -45,8 +45,23 @@ async function fetchBookData(book) {
 
 function addBook(book) {
   for (let i = 1; i < 15; i++) {
-    const li = document.createElement("li");
-    li.textContent = book.docs[i].title + "    " + book.docs[i].author_name + "    " + book.docs[i].first_publish_year + "    " + book.docs[i].has_fulltext + "    ";
+    const li = document.createElement("tr");
+    const cell = document.createElement("td");
+    cell.textContent = book.docs[i].title;
+    const cell2 = document.createElement("td");
+    cell2.textContent = book.docs[i].author_name;
+    const cell3 = document.createElement("td");
+    cell3.textContent = book.docs[i].first_publish_year;
+    const cell4 = document.createElement("td");
+    cell4.textContent = book.docs[i].edition_count;
+    const cell5 = document.createElement("td");
+    cell5.textContent = book.docs[i].has_fulltext;
+    //+ book.docs[i].first_publish_year + book.docs[i].title + book.docs[i].has_fulltext;
     bookList.appendChild(li);
+    li.appendChild(cell);
+    li.appendChild(cell2);
+    li.appendChild(cell3);
+    li.appendChild(cell4);
+    li.appendChild(cell5);
   }
 }
